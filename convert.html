@@ -1,0 +1,74 @@
+<!--
+Name: Wyatt O. Combs
+UniqueID: combswo
+Date: 3 November 2021
+Class: CSE 102
+
+File: convert.html
+Page purpose: To convert user-entered miles to kilometers.
+-->
+<!DOCTYPE html>
+<html id="parent">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styleme.css"/>
+    <script>
+      // Change the Background Color
+      function getRando() {
+        return "#" + Math.floor(Math.random()*16777215).toString(16);
+      }
+      function changeColor() {
+        document.getElementById("parent").style.backgroundImage = "linear-gradient("+getRando()+", white)";
+      }
+
+      // Switch to different pages
+      function goToHome() {
+        document.location.href = "index.html";
+      }
+      function goToClasses() {
+        document.location.href = "classes.html";
+      }
+      function goToMyFavorite() {
+        document.location.href = "my_favorite.html";
+      }
+      function goToMyMood() {
+        document.location.href = "my_mood.html";
+      }
+      function goToMyNeighbors() {
+        document.location.href = "my_neighbors.html";
+      }
+      function goToMyPrograms() {
+        document.location.href = "programs.html";
+      }
+
+      // Program functions
+      function ConvertToKm() {
+        miles = document.getElementById("miles").value;
+        km = miles * 1.609344;
+        document.getElementById("kilo").value = km;
+      }
+    </script>
+    <title>Mi to Km</title>
+  </head>
+  <body>
+    <div><!--                        Directory Section                       -->
+      <button onclick="goToHome()">Home</button>
+      <button onclick="goToClasses()">Classes</button>
+      <button onclick="goToMyFavorite()">My Favorite</button>
+      <button onclick="goToMyMood()">My Moods</button>
+      <button onclick="goToMyNeighbors()">My Neighbors</button>
+      <button onclick="goToMyPrograms()">MyPrograms</button>
+      <hr>
+    </div>
+    <div><!--                        Main Content Section                    -->
+      <h2>Convert Miles to Kilometers</h2>
+      <p>Enter miles: <input type="text" id="miles" size="10" value=""> mi.</p>
+      <p><button type="button" onclick="ConvertToKm()">Convert to km</button></p>
+      <p>Kilometers result: <input type="text" id="kilo" size="10" value=""> km.</p>
+    </div>
+    <hr>
+    <div><!--                        Cool Button Section                     -->
+      <button onclick="changeColor()">Change Background Color</button>
+    </div>
+  </body>
+</html>

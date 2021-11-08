@@ -1,0 +1,68 @@
+<!--
+Name: Wyatt O. Combs
+UniqueID: combswo
+Date: 3 November 2021
+Class: CSE 102
+
+File: programs.html
+Page purpose: To serve as a link page to my programs.
+-->
+<!DOCTYPE html>
+<html id="parent">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styleme.css"/>
+    <script>
+      // Change the Background Color
+      function getRando() {
+        return "#" + Math.floor(Math.random()*16777215).toString(16);
+      }
+      function changeColor() {
+        document.getElementById("parent").style.backgroundImage = "linear-gradient("+getRando()+", white)";
+      }
+
+      // Switch to different pages
+      function goToHome() {
+        document.location.href = "index.html";
+      }
+      function goToClasses() {
+        document.location.href = "classes.html";
+      }
+      function goToMyFavorite() {
+        document.location.href = "my_favorite.html";
+      }
+      function goToMyMood() {
+        document.location.href = "my_mood.html";
+      }
+      function goToMyNeighbors() {
+        document.location.href = "my_neighbors.html";
+      }
+      function goToMyPrograms() {
+        document.location.href = "programs.html";
+      }
+    </script>
+    <title>Programs</title>
+  </head>
+  <body>
+    <div><!--                        Directory Section                       -->
+      <button onclick="goToHome()">Home</button>
+      <button onclick="goToClasses()">Classes</button>
+      <button onclick="goToMyFavorite()">My Favorite</button>
+      <button onclick="goToMyMood()">My Moods</button>
+      <button onclick="goToMyNeighbors()">My Neighbors</button>
+      <button onclick="goToMyPrograms()">MyPrograms</button>
+      <hr>
+    </div>
+    <div><!--                        Main Content Section                    -->
+      <h2>Programs I Developed</h2>
+      <ol type="I">
+        <li><a href="convert.html">Convert Miles to Kilometers</a></li>
+        <li><a href="even_odd.html">Check if a number is even or odd</a></li>
+      </ol>
+    </div>
+    <hr>
+    <div><!--                        Cool Button Section                     -->
+      <button onclick="changeColor()">Change Background Color</button>
+    </div>
+  </body>
+</html>

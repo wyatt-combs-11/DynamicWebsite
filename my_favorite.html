@@ -1,0 +1,70 @@
+<!--
+Name: Wyatt O. Combs
+UniqueID: combswo
+Date: 3 November 2021
+Class: CSE 102
+
+File: my_favorite.html
+Page purpose: To show my favorite movies with links to related information.
+-->
+<!DOCTYPE html>
+<html id="parent">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styleme.css"/>
+    <script>
+      // Change the Background Color
+      function getRando() {
+        return "#" + Math.floor(Math.random()*16777215).toString(16);
+      }
+      function changeColor() {
+        document.getElementById("parent").style.backgroundImage = "linear-gradient("+getRando()+", white)";
+      }
+
+      // Switch to different pages
+      function goToHome() {
+        document.location.href = "index.html";
+      }
+      function goToClasses() {
+        document.location.href = "classes.html";
+      }
+      function goToMyFavorite() {
+        document.location.href = "my_favorite.html";
+      }
+      function goToMyMood() {
+        document.location.href = "my_mood.html";
+      }
+      function goToMyNeighbors() {
+        document.location.href = "my_neighbors.html";
+      }
+      function goToMyPrograms() {
+        document.location.href = "programs.html";
+      }
+    </script>
+    <title>Favorites</title>
+  </head>
+  <body>
+    <div><!--                        Directory Section                       -->
+      <button onclick="goToHome()">Home</button>
+      <button onclick="goToClasses()">Classes</button>
+      <button onclick="goToMyFavorite()">My Favorite</button>
+      <button onclick="goToMyMood()">My Moods</button>
+      <button onclick="goToMyNeighbors()">My Neighbors</button>
+      <button onclick="goToMyPrograms()">MyPrograms</button>
+      <hr>
+    </div>
+    <div><!--                        Main Content Section                    -->
+      <h2>My Favorite Movies</h2>
+      <p>(<i>These are the best ones that I can remember</i>)</p>
+      <ol>
+        <li>Ready Player One (see <a href="https://www.youtube.com/watch?v=cSp1dM2Vj48" target="_blank">trailer</a>)</li>
+        <li>Harry Potter and The Order of The Phoenix</li>
+        <li>Moana (see for pictures of <a href="https://www.menshealth.com/entertainment/g29686237/dwayne-the-rock-johnson-photos/" target="_blank">The Rock</a>)</li>
+      </ol>
+    </div>
+    <hr>
+    <div><!--                        Cool Button Section                     -->
+      <button onclick="changeColor()">Change Background Color</button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+/*
+Author: Wyatt O. Combs
+Description: This is the style sheet for the aboutme.html page.
+*/
+#parent {
+  margin-left: 10%;
+  margin-right: 10%;
+  min-height: 100%;
+  background-image: linear-gradient(#C1E1C1, white);
+  font-family: "Times New Roman"
+}
+h1 {
+  text-align: center;
+  font-family: "Tahoma";
+  color: #555555;
+  font-size: 50;
+  font-weight: 550;
+}
+h2 {
+  font-weight: 500;
+  color: #333333;
+  text-align: center;
+}
+p {
+  font-size: 14px;
+}
+a {
+  color: red;
+  font-style: italic;
+}
+td {
+  text-align: center;
+}
+#td-header {
+  border: solid;
+}
+#classes {
+  font-style: italic;
+}
+img {
+  length: 40%;
+  width: 40%;
+}
